@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document</title>
+    <script src="scripts/angular.js"></script>
+</head>
+
+<body ng-app ng-init="fname='abc'; lname='xyz';">
+    <div>
+        <h2>First Name: {{fname}}</h2>
+        <h2>Last Name: {{lname}}</h2> Change First Name:
+        <input type="text" ng-model="fname" />
+        </br>
+        </br>
+        Change Last Name:
+        <input type="text" ng-model="lname" />
+    </div>
+</body>
+
+</html>

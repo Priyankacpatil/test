@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact App</title>
+</head>
+<body ng-app='ContactApp'>
+    <div ng-controller='ContactController'>
+        <h3> Contact Details </h3>
+        <input type="text" placeholder"name" ng-model="newContact.name">
+        <input type="number" placeholder"phone" ng-model="newContact.phone">
+       
+        <input type="button" value="Add contact" ng-click="addContact(newContact)">
+        <br>
+        <br>
+       
+        
+        
+        
+<table border="1">
+  <thead>
+    <tr>
+      <th width="200">Name</th>
+      <th width="200">Phone</th>
+    </tr>
+    
+  </thead>
+  <tbody>
+    <tr ng-repeat="contact in contacts | filter:newContact.name">
+      <td><strong>{{contact.name | uppercase}}</strong></td>
+      <td>{{contact.phone}}</td>
+    </tr>
+  </tbody>
+</table>    
+
+
+        
+    </div>
+
+    <script src="angular.min.js"></script>
+
+    <script type="text/javascript">
+        
+        var app = angular.module('ContactApp',[]);
+        app.controller('ContactController', ContactController);
+
+        function ContactController ($scope) {
+            $scope.newContact = [];
+            $scope.contacts = [
+                {name:'Adam', phone:'8798766545' },
+                {name:'Chris', phone:'8734567889' },
+                {name:'Chong', phone:'9878988675'},
+                {name:'Yaoyang', phone:'9887698932' },
+                {name:'Stephan', phone:'7679829134'}
+            ];
+            $scope.addContact = function(contact){
+                $scope.contacts.push(contact);   
+                $scope.newContact = [];    
+				
+     
+            }
+
+        }
+
+    </script>
+    
+    
+   
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>-->
+</body>
+</html>
