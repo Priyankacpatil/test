@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>React:: ToDo List</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    
+   <link rel="stylesheet" href="css/style.css">
+   
+  </head>
+  <body>
+   <div class="container" id="app"></div>
+    
+    <script type="text/babel">
+	var FilterList = React.createClass({
+
+	initialItems: [
+                "Apples",
+                "Pineapple",
+                "oranges",
+                "Strawberry",
+                "Cranberry",
+                "Grapes",
+                "Watermelon",
+                "MuskMelon"
+            ],
+
+    getInitialState: function() {
+        return {
+            items: []
+        }
+    },
+
+    componentWillMount: function(){
+        this.setState({items: this.initialItems})
+    },
+
+    filterList: function(event) {
+        var updatedList = this.initialItems;
+        updatedList = updatedList.filter(function(item){
+            return item.toLowerCase().search(
+                    event.target.value.toLowerCase()) !== -1;
+        });
+        this.setState({items: updatedList});
+    },
+
+    render: function() {
+        return(
+            <div className="filter-list">
+                <input type="text" placeholder="Search" onChange={this.filterList}/>
+                <List items={this.state.items}/>
+            </div>
+        )
+    }
+});
+
+
+var List = React.createClass({
+    render: function(){
+        return (
+            <ul>
+                {
+                    this.props.items.map(function(item) {
+                        return <li key={item}>{item}</li>
+                    })
+                }
+            </ul>
+        )
+    }
+});
+
+
+var element = React.createElement(FilterList);
+			ReactDOM.render(element, document.getElementById("app"));
+	
+
+    </script>
+  </body>
+</html>

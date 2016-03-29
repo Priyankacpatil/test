@@ -1,0 +1,91 @@
+*
+		{
+			margin: 0;
+			padding: 0;
+		}
+		h1
+		{
+			text-align: center;
+			margin: 10px 0;
+			font-family: Arial;
+			font-size: 20px;
+			color: maroon;
+
+		}
+		li
+		{
+			margin: 15px 0;
+		}
+		p
+		{
+			display: inline-block;
+			padding-left: 10px;
+			padding-top: 0;
+			
+			font-family: Arial;
+			font-size: 15px;
+			margin-top: -15px;
+		}
+		#edit {
+    width: 50px;
+    height: 24px;
+    padding: 0;
+    margin: 0;
+    float: right;
+    border-radius: 4px;
+    margin-top: -3px;
+    cursor: pointer;
+	display: none;
+}
+    	form
+		{
+			background: #f1f1f1;
+			
+			width: 270px;
+			padding: 10px;
+			margin: 0 auto;
+		}
+		
+		input[type=text]
+		{
+			margin-bottom: 10px;
+			padding: 5px;
+		
+		}
+		label
+		{
+			margin-right: 10px;
+		
+		}
+		#output
+		{
+			border: 1px solid #ccc;
+			width: 270px;
+			padding: 10px;
+			margin: 0 auto;
+			margin-top: 10px;
+		}
+		li
+		{
+			list-style-type: none;
+		}
+		
+		button
+		{
+			margin-top: 10px;
+			width: 100px;
+			padding: 10px 0;
+			background: #666;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+		}
+		input[type=checkbox]
+		{
+			float: left;
+			margin-top: 4px;
+		}
+		#linethrough
+		{
+			background: #ccc;
+		}

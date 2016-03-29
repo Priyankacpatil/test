@@ -1,0 +1,25 @@
+Javascript:
+
+Should be perfect
+Clousers
+Prototypes
+ES5/ES6
+Create Classes
+Constructors
+Inheritance
+class extends
+this for function
+
+
+React: All
+
+node.js
+npm for node.js
+how to install package
+package.json
+write dependencies
+
+Flux architecture
+
+react uses external 3rd party router
+
